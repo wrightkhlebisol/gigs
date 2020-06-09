@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/make-users', 'UsersController@userFactory')->name('create50Users');
