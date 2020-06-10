@@ -9,8 +9,8 @@ class Course extends Model
     //
     protected $guarded = [];
 
-    public function user()
+    public function users()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsToMany(User::class, 'course_users');
     }
 }

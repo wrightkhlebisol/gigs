@@ -39,9 +39,10 @@ class CourseController extends Controller
 
     public function create50Courses()
     {
-        $createCoursesJob = new Create50Courses();
-        if (dispatch($createCoursesJob)) {
-            return response()->json(['success' => 'Factory executed'], 200);
+        $createCourses = Create50Courses::dispatch();
+
+        if ($createCourses) {
+            return response()->json(['success' => $createCourses], 200);
         }
     }
 }

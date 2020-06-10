@@ -36,9 +36,13 @@ Route::group([
 
     Route::get('/courses', 'CourseController@index');
 
+    Route::post('/courses/create', 'CourseController@create');
+
     Route::get('/courses/job/create50', 'CourseController@create50Courses');
 
     Route::get('courses/export/excel',  'CourseController@exportExcel');
 
     Route::get('courses/export/csv',  'CourseController@exportCSV');
+
+    Route::post('courses/register', 'UserController@registerCourse');
 });

@@ -30,6 +30,6 @@ class Create50Courses implements ShouldQueue
     public function handle()
     {
         //
-        factory(App\Course::class, 50)->make();
+        factory(\App\Course::class, 50)->make();
     }
 }
