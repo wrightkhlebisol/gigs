@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use Illuminate\Http\Request;
 
 /*
@@ -31,7 +32,13 @@ Route::group([
 
     Route::post('/logout', 'AuthController@logout');
 
-    Route::get('/make-users', 'UserController@userFactory')->name('create50Users');
-
     Route::get('/auth', 'AuthController@getAuthUser');
+
+    Route::get('/courses', 'CourseController@index');
+
+    Route::get('/courses/job/create50', 'CourseController@create50Courses');
+
+    Route::get('courses/export/excel',  'CourseController@exportExcel');
+
+    Route::get('courses/export/csv',  'CourseController@exportCSV');
 });

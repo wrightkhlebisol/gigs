@@ -66,4 +66,9 @@ class User extends Authenticatable implements JWTSubject
             $this->attributes['password'] = Hash::make($password);
         }
     }
+
+    public function course()
+    {
+        return $this->hasMany('App\Course');
+    }
 }
