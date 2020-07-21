@@ -15,8 +15,8 @@ class CreateGigsTable extends Migration
     {
         Schema::create('gigs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->int('min_salary')->nullable;
-            $table->int('max_salary')->nullable;
+            $table->integer('min_salary')->nullable;
+            $table->integer('max_salary')->nullable;
             $table->string('role')->nullable;
             $table->string('company')->nullable;
             $table->string('country')->nullable;

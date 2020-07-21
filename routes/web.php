@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,4 +13,4 @@
 |
 */
 
-Route::resource('gigs', 'GigsController');
+Route::resource('/', 'GigsController');

@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\CourseController;
 use Illuminate\Http\Request;
 
 /*
@@ -14,35 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-
-
-Route::group([
-    'middleware'    => 'api',
-], function () {
-    Route::get('/', function () {
-        return response()->json(['forbidden' => 'Absent or invalid token specified'], 403);
-    });
-
-    Route::post('/register', 'AuthController@register');
-
-    Route::post('/login', 'AuthController@login')->name('login');
-
-    Route::post('/logout', 'AuthController@logout');
-
-    Route::get('/auth', 'AuthController@getAuthUser');
-
-    Route::get('/courses', 'CourseController@index');
-
-    Route::post('/courses/create', 'CourseController@create');
-
-    Route::get('/courses/job/create50', 'CourseController@create50Courses');
-
-    Route::get('courses/export/excel',  'CourseController@exportExcel');
-
-    Route::get('courses/export/csv',  'CourseController@exportCSV');
-
-    Route::post('courses/register', 'UserController@registerCourse');
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
 });

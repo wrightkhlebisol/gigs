@@ -15,6 +15,7 @@ class GigsController extends Controller
     public function index()
     {
         //
+        return Gigs::all();
     }
 
     /**
