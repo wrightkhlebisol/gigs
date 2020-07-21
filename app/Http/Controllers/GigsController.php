@@ -15,7 +15,8 @@ class GigsController extends Controller
     public function index()
     {
         //
-        return Gigs::all();
+        $gigs = Gigs::all();
+        return view('index', compact($gigs));
     }
 
     /**
@@ -26,6 +27,7 @@ class GigsController extends Controller
     public function create()
     {
         //
+        return view('show', compact($gigs));
     }
 
     /**
@@ -48,6 +50,7 @@ class GigsController extends Controller
     public function show(Gigs $gigs)
     {
         //
+        return view('show', compact($gigs));
     }
 
     /**
@@ -59,6 +62,7 @@ class GigsController extends Controller
     public function edit(Gigs $gigs)
     {
         //
+        return view('edit', compact($gigs));
     }
 
     /**
