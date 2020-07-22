@@ -31,7 +31,7 @@
 <body>
 
 	<div id="app" class="bg-gray-300 font-sans flex h-screen">
-		<div class="w-1/6 pl-6 bg-gray-200" style="border: 1px solid #ECECEC; opacity: 0.5; font-family: Nunito">
+		<div class="w-1/6 pl-6 bg-gray-100" style="border: 1px solid #ECECEC; opacity: 0.5; font-family: Nunito">
 			<div>
 				<img src="{{asset('img/Group493.svg')}}" class="h-20 w-20 items-center justify-center inline">
 			</div>
@@ -65,7 +65,7 @@
 					<img src="{{asset('img/Rectangle13.png')}}" class="h-6 w-6 items-center justify-center inline">
 				</div>
 			</header>
-			<main class="px-16">
+			<main>
 				@yield('content')
 
 			</main>
