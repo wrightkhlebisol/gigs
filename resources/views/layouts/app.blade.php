@@ -20,6 +20,7 @@
 
 	<!-- Styles -->
 	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 	<style>
 		body {
 			font: Regular 45px/63px Circular Std Bold;
