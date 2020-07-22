@@ -30,7 +30,7 @@
             </h1>
         </div>
     </div>
-    <div class="px-16 py-8 flex justify-between justify- text-gray-700">
+    <div class="px-16 py-8 pb-2 flex justify-between justify- text-gray-700">
         <div class="w-1/6">
             <button type="submit" class="border-2 border-gray-300 py-1 px-3 rounded-lg">
                 Freelance
@@ -76,24 +76,57 @@
         </div>
     </div>
     <div class="px-16 flex">
-        <table class=" w-full">
-            <thead>
-                <th></th>
-                <th>Role</th>
-                <th>Role</th>
-                <th>Role</th>
-                <th>Role</th>
-                <th></th>
+        <table class="w-full text-gray-600">
+            <thead class="py-3 text-xs font-light">
+                <tr class=" items-start">
+                    <th class=" text-left py-8"></th>
+                    <th class=" text-left py-8">Role</th>
+                    <th class=" text-left py-8">Company</th>
+                    <th class=" text-left py-8">Date
+                        <img src="{{asset('img/Group288.svg')}}" class="h-4 w-4 inline">
+                    </th>
+                    <th class=" text-left py-8">Salary ($)
+                        <img src="{{asset('img/Group288.svg')}}" class="h-4 w-4 inline">
+                    </th>
+                    <th class=" text-left py-8"></th>
+                </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td><input type="checkbox" name="" id=""></td>
-                    <td>Product Designer</td>
-                    <td>TM30</td>
-                    <td>20th June, 2020</td>
-                    <td>20,000 - 30,000</td>
-                    <td>
-                        <button type="submit">Delete</button></td>
+            <tbody class=" font-medium">
+                <tr class="rounded-full bg-white text-gray-800">
+                    <td class="py-2 pl-5"><input type="checkbox" name="" id=""></td>
+                    <td class="py-2">Product Designer</td>
+                    <td class="py-2">TM30</td>
+                    <td class="py-2">20th June, 2020</td>
+                    <td class="py-2">20,000 - 30,000</td>
+                    <td class="py-2 text-right pr-2">
+                        <button type="submit" class=" bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg">Delete</button></td>
+                </tr>
+                <tr class="rounded-full bg-white text-gray-800">
+                    <td class="py-2 pl-5"><input type="checkbox" name="" id=""></td>
+                    <td class="py-2">Product Designer</td>
+                    <td class="py-2">TM30</td>
+                    <td class="py-2">20th June, 2020</td>
+                    <td class="py-2">20,000 - 30,000</td>
+                    <td class="py-2 text-right pr-2">
+                        <button type="submit" class=" bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg">Delete</button></td>
+                </tr>
+                <tr class="rounded-full bg-white text-gray-800">
+                    <td class="py-2 pl-5"><input type="checkbox" name="" id=""></td>
+                    <td class="py-2">Product Designer</td>
+                    <td class="py-2">TM30</td>
+                    <td class="py-2">20th June, 2020</td>
+                    <td class="py-2">20,000 - 30,000</td>
+                    <td class="py-2 text-right pr-2">
+                        <button type="submit" class=" bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg">Delete</button></td>
+                </tr>
+                <tr class="rounded-full bg-white text-gray-800">
+                    <td class="py-2 pl-5"><input type="checkbox" name="" id=""></td>
+                    <td class="py-2">Product Designer</td>
+                    <td class="py-2">TM30</td>
+                    <td class="py-2">20th June, 2020</td>
+                    <td class="py-2">20,000 - 30,000</td>
+                    <td class="py-2 text-right pr-2">
+                        <button type="submit" class=" bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg">Delete</button></td>
                 </tr>
             </tbody>
         </table>
