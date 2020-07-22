@@ -15,34 +15,42 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7e62766cf7.js" crossorigin="anonymous"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <section class="px-8 py-4 mb-6">
-            <header class="container mx-auto">
-                <h1>
-                    <img src="/images/logo.svg" alt="Tweety">
-                </h1>
-            </header>
-        </section>
+    
+    <div id="app" class="bg-gray-300 font-sans">
+        <div class="container shadow-2xl rounded-lg text-gray-700">
+		<div class="py-6 px-4 flex justify-between bg-white rounded-t-lg">
+			<div>
+				<img src="" class="inline mx-5 rounded-full h-16 w-16 items-center justify-center"/>
+				<p class="inline font-bold text-4xl">Internia</p>
+			</div>
+			<div class="flex content-center font-medium text-gray-600 my-auto">
+				
+			</div>
+			<div class="float-right">
+				<div class="flex">
+					<p  class="mx-5 mt-2 text-3xl">
+						<i class="far fa-bell"></i>
+					</p>
+					<p  class="mx-5 mt-2 text-3xl">
+						<i class="far fa-envelope"></i>
+					</p>
+					<img src="https://i.pravatar.cc/50?u=xf" class="inline mx-5 rounded-full h-8 w-8 items-center justify-center"/>
+				</div>
+			</div>
+		</div>
 
-        <section class="px-8">
-            <main class="container mx-auto">
-                <div class=" lg:flex lg:justify-between">
-                   
+		
 
-                    <div class="lg:flex-1 lg:mx-10" style="max-width: 700px">
-                        @yield('content')
-                    </div>
 
-                    
-                   
-                </div>
-            </main>
-        </section>
+            @yield('content')
+
+	</div>
     </div>
 </body>
 </html>

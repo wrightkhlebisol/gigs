@@ -12,11 +12,11 @@ class GigsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Gigs $gigs)
     {
         //
-        $gigs = Gigs::all();
-        return view('index', compact($gigs));
+        $allGigs = $gigs->orderByDesc('created_at')->get();
+        return view('index', compact('allGigs'));
     }
 
     /**
@@ -27,7 +27,7 @@ class GigsController extends Controller
     public function create()
     {
         //
-        return view('show', compact($gigs));
+        return view('create');
     }
 
     /**
@@ -36,9 +36,12 @@ class GigsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Gigs $gigs)
     {
         //
+        $gigs->create($request->all());
+
+        return response()->json(['success' => 'User Created', 'user_details' => $request->all()], 200);
     }
 
     /**
@@ -50,7 +53,11 @@ class GigsController extends Controller
     public function show(Gigs $gigs)
     {
         //
-        return view('show', compact($gigs));
+        if (!empty($gigs)) {
+            return $gigs;
+        } else {
+            return response()->json("Gigs $gigs->id not found", 404);
+        }
     }
 
     /**
@@ -75,6 +82,9 @@ class GigsController extends Controller
     public function update(Request $request, Gigs $gigs)
     {
         //
+        $gigs->update($request->all());
+
+        return response()->json($gigs, 200);
     }
 
     /**
@@ -86,5 +96,10 @@ class GigsController extends Controller
     public function destroy(Gigs $gigs)
     {
         //
+        if ($gigs->delete()) {
+            return $gigs;
+        } else {
+            return response()->json("Gigs $gigs->id not found", 404);
+        }
     }
 }
