@@ -31,7 +31,7 @@
 <body>
 
 	<div id="app" class="bg-gray-300 font-sans flex h-screen">
-		<div class="w-1/6 pl-6 bg-gray-100" style="border: 1px solid #ECECEC; opacity: 0.5; font-family: Nunito">
+		<div class="w-1/6 pl-6 bg-gray-100" style="border: 2px solid #ECECEC; opacity: 0.5; font-family: Nunito">
 			<div>
 				<img src="{{asset('img/Group493.svg')}}" class="h-20 w-20 items-center justify-center inline">
 			</div>
@@ -41,15 +41,15 @@
 			</div>
 
 			<div class="py-5">
-				<img src="{{asset('img/Icon-briefcase-fill.svg')}}" class="h-6 w-6 items-center justify-center inline"> Gigs
+				<img src="{{asset('img/Icon-briefcase-fill.svg')}}" style="color: #eecd7d;" class="h-6 w-6 items-center justify-center inline"> Gigs
 			</div>
 
 			<div class="py-5">
-				<img src="{{asset('img/Icon-home-fill.svg')}}" class="h-6 w-6 items-center justify-center inline"> Company
+				<img src="{{asset('img/Icon-npm-fill.svg')}}" class="h-6 w-6 items-center justify-center inline"> Company
 			</div>
 
 			<div class="py-5">
-				<img src="{{asset('img/Icon-home-fill.svg')}}" class="h-6 w-6 items-center justify-center inline"> Account
+				<img src="{{asset('img/Icon-person-fill.svg')}}" class="h-6 w-6 items-center justify-center inline"> Account
 			</div>
 		</div>
 
