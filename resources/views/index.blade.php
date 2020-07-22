@@ -91,42 +91,28 @@
             </tr>
         </thead>
         <tbody class=" font-medium">
+
+
+            @forelse($allGigs as $allGig)
             <tr class=" items-start rounded-full bg-white text-gray-800">
-                <td class="py-2 pl-5"><input type="checkbox" name="" id=""></td>
-                <td class="py-2">Product Designer</td>
-                <td class="py-2">TM30</td>
-                <td class="py-2">20th June, 2020</td>
-                <td class="py-2">20,000 - 30,000</td>
+                <td class="py-2 pl-5">
+                    <input type="checkbox" name="" value="{{$allGig->id}}" id="gig_{{$allGig->id}}">
+                </td>
+                <td class="py-2">{{$allGig->role}}</td>
+                <td class="py-2">{{$allGig->company}}</td>
+                <td class="py-2">{{$allGig->created_at}}</td>
+                <td class="py-2">{{$allGig->min_salary}} - {{$allGig->max_salary}}</td>
                 <td class="py-2 text-right pr-2">
-                    <button type="submit" class=" bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg">Delete</button></td>
+                    <button type="submit" @click="{}" class="bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg">Delete</button></td>
             </tr>
-            <tr class=" items-start rounded-full bg-white text-gray-800">
-                <td class="py-2 pl-5"><input type="checkbox" name="" id=""></td>
-                <td class="py-2">Product Designer</td>
-                <td class="py-2">TM30</td>
-                <td class="py-2">20th June, 2020</td>
-                <td class="py-2">20,000 - 30,000</td>
-                <td class="py-2 text-right pr-2">
-                    <button type="submit" class=" bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg">Delete</button></td>
+
+            @empty
+            <tr>
+                <td colspan="6">No gigs yet</td>
             </tr>
-            <tr class=" items-start rounded-full bg-white text-gray-800">
-                <td class="py-2 pl-5"><input type="checkbox" name="" id=""></td>
-                <td class="py-2">Product Designer</td>
-                <td class="py-2">TM30</td>
-                <td class="py-2">20th June, 2020</td>
-                <td class="py-2">20,000 - 30,000</td>
-                <td class="py-2 text-right pr-2">
-                    <button type="submit" class=" bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg">Delete</button></td>
-            </tr>
-            <tr class=" items-start rounded-full bg-white text-gray-800">
-                <td class="py-2 pl-5"><input type="checkbox" name="" id=""></td>
-                <td class="py-2">Product Designer</td>
-                <td class="py-2">TM30</td>
-                <td class="py-2">20th June, 2020</td>
-                <td class="py-2">20,000 - 30,000</td>
-                <td class="py-2 text-right pr-2">
-                    <button type="submit" class=" bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg">Delete</button></td>
-            </tr>
+            @endforelse
+
+
         </tbody>
     </table>
 </div>

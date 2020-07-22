@@ -40,11 +40,11 @@
 				<div class="flex justify-between">
 					<div class="w-1/2 mr-2">
 						<label for="role">Role</label>
-						<input type="text" class="border-2 border-gray-200 rounded-lg p-2 w-full block mt-" id="role" value="Product Designer">
+						<input type="text" class="border-2 border-gray-200 rounded-lg p-2 w-full block mt-3" id="role" value="Product Designer">
 					</div>
 					<div class="w-1/2">
 						<label for="company">Company</label>
-						<input id="company" class="border-2 border-gray-200 rounded-lg p-2 w-full block" type="text" value="TM30">
+						<input id="company" class="border-2 border-gray-200 rounded-lg p-2 w-full block mt-3" type="text" value="TM30">
 					</div>
 				</div>
 			</div>
@@ -52,23 +52,25 @@
 			<div class="mb-4">
 				<p>Location</p>
 				<div class="flex justify-between">
-					<input type="text" class="border-2 border-gray-200 rounded-lg p-2 w-full mr-2" placeholder="Country">
-					<input type="text" class="border-2 border-gray-200 rounded-lg p-2 w-full" placeholder="State/Region">
+					<input type="text" class="border-2 border-gray-200 rounded-lg p-2 w-full mr-2 mt-3" placeholder="Country">
+					<input type="text" class="border-2 border-gray-200 rounded-lg p-2 w-full mt-3" placeholder="State/Region">
 				</div>
 				<div>
-					<input type="text" class="border-2 border-gray-200 rounded-lg p-2 w-full" placeholder="Address">
+					<input type="text" class="border-2 border-gray-200 rounded-lg p-2 w-full mt-3" placeholder="Address">
 				</div>
 			</div>
 
 			<div class="mb-4">
 				<p>Add Tags</p>
 				<div>
-					<input type="text" class="border-2 border-gray-200 rounded-lg p-2 w-full" placeholder="Minimum">
+					<input type="text" class="border-2 border-gray-200 rounded-lg p-2 w-full my-3" placeholder="Minimum">
 				</div>
-				Suggested tags: <span class="underline">full time</span> <span class="underline">Contract</span> <span class="underline">freelance</span>
+				<span>
+					Suggested tags: <span class="underline">full time</span> <span class="underline">Contract</span> <span class="underline">freelance</span>
+				</span>
 			</div>
 
-			<div class="mb-4" style="text-align: right;">
+			<div class="my-8" style="text-align: right;">
 				<a href="/" class="mr-5">Cancel</a>
 				<button class="text-white text-xs bg-purple-900 rounded-md py-3 px-8">Continue</button>
 			</div>
