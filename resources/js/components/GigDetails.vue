@@ -10,6 +10,7 @@
             class="border-2 border-gray-200 rounded-lg p-2 w-full block mt-3"
             id="role"
             placeholder="e.g Product Designer"
+            v-model="role"
           />
         </div>
         <div class="w-1/2">
@@ -20,6 +21,7 @@
             class="border-2 border-gray-200 rounded-lg p-2 w-full block mt-3"
             type="text"
             placeholder="e.g Krystal Digital"
+            v-model="company"
           />
         </div>
       </div>
@@ -33,12 +35,14 @@
           class="border-2 border-gray-200 rounded-lg p-2 w-full mr-2 mt-3"
           name="country"
           placeholder="Country"
+          v-model="country"
         />
         <input
           type="text"
           class="border-2 border-gray-200 rounded-lg p-2 w-full mt-3"
           name="state"
           placeholder="State/Region"
+          v-model="state"
         />
       </div>
       <div>
@@ -47,6 +51,7 @@
           class="border-2 border-gray-200 rounded-lg p-2 w-full mt-3"
           name="address"
           placeholder="Address"
+          v-model="address"
         />
       </div>
     </div>
@@ -59,6 +64,7 @@
           class="border-2 border-gray-200 rounded-lg p-2 w-full my-3"
           name="tags"
           placeholder="Tags"
+          v-model="tags"
         />
       </div>
       <span>
@@ -73,7 +79,7 @@
       <a href="/" class="mr-5">Cancel</a>
       <button
         class="text-white text-xs bg-purple-900 rounded-md py-3 px-8"
-        @click="$emit('detailsEvent')"
+        @click="$emit('detailsEvent'); storeTempVars();"
       >Continue</button>
     </div>
   </div>
@@ -81,14 +87,35 @@
 
 <script>
 export default {
-  props: {
-    id: 0,
-    role: "",
-    company: "",
-    country: "",
-    state: "",
-    tags: "",
-    address: ""
+  //   props: {
+  //     id: 0,
+  //     role: "",
+  //     company: "",
+  //     country: "",
+  //     state: "",
+  //     tags: "",
+  //     address: ""
+  //   }
+  data() {
+    return {
+      id: 0,
+      role: "",
+      company: "",
+      country: "",
+      state: "",
+      tags: "",
+      address: ""
+    };
+  },
+  methods: {
+    storeTempVars() {
+      localStorage.setItem("role", this.role);
+      localStorage.setItem("company", this.company);
+      localStorage.setItem("country", this.country);
+      localStorage.setItem("state", this.state);
+      localStorage.setItem("address", this.address);
+      localStorage.setItem("tags", this.tags);
+    }
   }
 };
 </script>
