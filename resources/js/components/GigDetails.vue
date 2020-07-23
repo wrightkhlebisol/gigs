@@ -69,7 +69,7 @@
       </span>
     </div>
 
-    <div class="my-8" style="text-align: right;">
+    <div class="my-20 mb-10" style="text-align: right;">
       <a href="/" class="mr-5">Cancel</a>
       <button class="text-white text-xs bg-purple-900 rounded-md py-3 px-8">Continue</button>
     </div>

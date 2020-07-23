@@ -11,10 +11,10 @@
 	<div>
 		<h1 class="py-6 mb-2 text-xl font-medium text-gray-500">New gig</h1>
 	</div>
-	<div class="flex">
+	<div class="flex text-gray-700 font-medium">
 		<div class="gigMenu w-1/5 h-full rounded-lg shadow-lg bg-white p-8 mr-6">
 			<div>Basic Data</div>
-			<div class="border-l-2 h-10 border-gray-300"></div>
+			<div class="border-l-4 h-10 border-gray-100"></div>
 			<div>Remuneration</div>
 		</div>
 

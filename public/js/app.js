@@ -37897,7 +37897,10 @@ var staticRenderFns = [
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "my-8", staticStyle: { "text-align": "right" } },
+          {
+            staticClass: "my-20 mb-10",
+            staticStyle: { "text-align": "right" }
+          },
           [
             _c("a", { staticClass: "mr-5", attrs: { href: "/" } }, [
               _vm._v("Cancel")
@@ -37981,7 +37984,10 @@ var staticRenderFns = [
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "mb-4", staticStyle: { "text-align": "right" } },
+          {
+            staticClass: "my-20 mb-10",
+            staticStyle: { "text-align": "right" }
+          },
           [
             _c("a", { staticClass: "mr-5", attrs: { href: "/" } }, [
               _vm._v("Back")
