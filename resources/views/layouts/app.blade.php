@@ -22,37 +22,47 @@
 	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 	<style>
-		body {
+		/* body {
 			font: Regular 45px/63px "Circular Std Bold";
-		}
+		} */
 	</style>
 
 </head>
 
 <body>
 
-	<div id="app" class="bg-gray-300 font-sans flex h-screen">
-		<div class="w-1/6 pl-6 bg-gray-100" style="border: 2px solid #ECECEC; opacity: 0.5; font-family: Nunito">
+	<div id="app" class="bg-gray-100 font-sans flex h-screen">
+		<div class="w-1/6 px-6 bg-gray-100 text-sm" style="border: 2px solid #ECECEC; opacity: 0.5; font-family: Nunito">
 			<div>
 				<a href="/">
 					<img src="{{asset('img/Group493.svg')}}" class="h-20 w-20 items-center justify-center inline">
 				</a>
 			</div>
 
-			<div class="py-5">
-				<img src="{{asset('img/Icon-home-fill.svg')}}" class="h-6 w-6 items-center justify-center inline"><a href="/">Dashboard</a>
+			<div class="py-5 items-center">
+				<img src="{{asset('img/Icon-home-fill.svg')}}" class="h-4 w-4 items-center justify-center inline">
+				<span class="ml-2">
+					<a href="/">Dashboard</a>
+				</span>
 			</div>
 
-			<div class="py-5">
-				<img src="{{asset('img/Icon-briefcase-fill.svg')}}" style="color: #eecd7d;" class="h-6 w-6 items-center justify-center inline"> <a href="/">Gigs</a>
+			<div class="py-5 items-center">
+				<img src="{{asset('img/Icon-briefcase-fill.svg')}}" style="color: #eecd7d;" class="h-4 w-4 items-center justify-center inline">
+				<span class="ml-2">
+					<a href="/">Gigs</a>
+				</span>
 			</div>
 
-			<div class="py-5">
-				<img src="{{asset('img/Icon-npm-fill.svg')}}" class="h-6 w-6 items-center justify-center inline"> Company
+			<div class="py-5 items-center">
+				<img src="{{asset('img/Icon-npm-fill.svg')}}" class="h-4 w-4 items-center justify-center inline">
+				<span class="ml-2">Company</span>
 			</div>
 
-			<div class="py-5">
-				<img src="{{asset('img/Icon-person-fill.svg')}}" class="h-6 w-6 items-center justify-center inline"> Account
+			<div class="py-5 items-center">
+				<img src="{{asset('img/Icon-person-fill.svg')}}" class="h-4 w-4 items-center justify-center inline">
+				<span class="ml-2">
+					Account
+				</span>
 			</div>
 		</div>
 
