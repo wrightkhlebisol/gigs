@@ -13,9 +13,15 @@
 	</div>
 	<div class="flex text-gray-700 font-medium">
 		<div class="gigMenu w-1/5 h-full rounded-lg shadow-lg bg-white p-8 mr-6">
-			<div>Basic Data</div>
+			<div class="text-yellow-600 flex items-center">
+				<div class="rounded-full bg-yellow-600 h-2 w-2 mr-2"></div>
+				<div>Basic Data</div>
+			</div>
 			<div class="border-l-4 h-10 border-gray-100"></div>
-			<div>Remuneration</div>
+			<div class="text-yellow-600 flex items-center">
+				<div class="rounded-full bg-yellow-600 h-2 w-2 mr-2"></div>
+				<div>Remuneration</div>
+			</div>
 		</div>
 
 		<div class="w-3/5">
