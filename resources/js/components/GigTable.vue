@@ -33,6 +33,12 @@
         <td class="py-2 text-right pr-2">
           <button
             type="submit"
+            class="bg-green-200 text-green-600 text-xs px-8 py-1 rounded-lg"
+            @click="updateGig(gig.id)"
+          >Update</button>
+
+          <button
+            type="submit"
             class="bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg"
             @click="deleteGig(gig.id)"
           >Delete</button>
@@ -57,6 +63,9 @@ export default {
           this.allGigs = data.data;
         })
         .catch();
+    },
+    updateGig(gigId) {
+      alert(`TODO: Update modal for ${gigId}`);
     },
     deleteGig(gigId) {
       if (confirm(`Are you sure you want to delete gig ${gigId}`)) {

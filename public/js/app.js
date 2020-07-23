@@ -1932,6 +1932,141 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigDetails.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigDetails.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigSalary.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigSalary.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigTable.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigTable.vue?vue&type=script&lang=js& ***!
@@ -1941,6 +2076,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1998,6 +2139,9 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("/gigs").then(function (data) {
         _this.allGigs = data.data;
       })["catch"]();
+    },
+    updateGig: function updateGig(gigId) {
+      alert("TODO: Update modal for ".concat(gigId));
     },
     deleteGig: function deleteGig(gigId) {
       var _this2 = this;
@@ -37640,6 +37784,229 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigDetails.vue?vue&type=template&id=4258a8e8&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigDetails.vue?vue&type=template&id=4258a8e8& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "rounded-lg shadow-lg bg-white p-12 mb-4" },
+      [
+        _c("div", { staticClass: "mb-4" }, [
+          _c("div", { staticClass: "flex justify-between" }, [
+            _c("div", { staticClass: "w-1/2 mr-2" }, [
+              _c("label", { attrs: { for: "role" } }, [_vm._v("Role")]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass:
+                  "border-2 border-gray-200 rounded-lg p-2 w-full block mt-3",
+                attrs: {
+                  type: "text",
+                  name: "role",
+                  id: "role",
+                  placeholder: "e.g Product Designer"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "w-1/2" }, [
+              _c("label", { attrs: { for: "company" } }, [_vm._v("Company")]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass:
+                  "border-2 border-gray-200 rounded-lg p-2 w-full block mt-3",
+                attrs: {
+                  id: "company",
+                  name: "company",
+                  type: "text",
+                  placeholder: "e.g Krystal Digital"
+                }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-4" }, [
+          _c("p", [_vm._v("Location")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex justify-between" }, [
+            _c("input", {
+              staticClass:
+                "border-2 border-gray-200 rounded-lg p-2 w-full mr-2 mt-3",
+              attrs: { type: "text", name: "country", placeholder: "Country" }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              staticClass:
+                "border-2 border-gray-200 rounded-lg p-2 w-full mt-3",
+              attrs: {
+                type: "text",
+                name: "state",
+                placeholder: "State/Region"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _c("input", {
+              staticClass:
+                "border-2 border-gray-200 rounded-lg p-2 w-full mt-3",
+              attrs: { type: "text", name: "address", placeholder: "Address" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mb-4" }, [
+          _c("p", [_vm._v("Add Tags")]),
+          _vm._v(" "),
+          _c("div", [
+            _c("input", {
+              staticClass:
+                "border-2 border-gray-200 rounded-lg p-2 w-full my-3",
+              attrs: { type: "text", name: "tags", placeholder: "Tags" }
+            })
+          ]),
+          _vm._v(" "),
+          _c("span", [
+            _vm._v("\n      Suggested tags:\n      "),
+            _c("span", { staticClass: "underline" }, [_vm._v("full time")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "underline" }, [_vm._v("Contract")]),
+            _vm._v(" "),
+            _c("span", { staticClass: "underline" }, [_vm._v("freelance")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "my-8", staticStyle: { "text-align": "right" } },
+          [
+            _c("a", { staticClass: "mr-5", attrs: { href: "/" } }, [
+              _vm._v("Cancel")
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass:
+                  "text-white text-xs bg-purple-900 rounded-md py-3 px-8"
+              },
+              [_vm._v("Continue")]
+            )
+          ]
+        )
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigSalary.vue?vue&type=template&id=3da5b894&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigSalary.vue?vue&type=template&id=3da5b894& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "rounded-lg shadow-lg bg-white p-12 mb-4" },
+      [
+        _c("h1", { staticClass: "text-md mb-3 text-gray-700" }, [
+          _vm._v("Salary")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "flex justify-between mb-16" }, [
+          _c("div", { staticClass: "w-1/2 mr-2" }, [
+            _c("input", {
+              staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full",
+              attrs: {
+                type: "number",
+                min: "0",
+                name: "min_salary",
+                placeholder: "Minimum"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "w-1/2" }, [
+            _c("input", {
+              staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full",
+              attrs: {
+                type: "number",
+                min: "0",
+                name: "max_salary",
+                placeholder: "Maximum"
+              }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "mb-4", staticStyle: { "text-align": "right" } },
+          [
+            _c("a", { staticClass: "mr-5", attrs: { href: "/" } }, [
+              _vm._v("Back")
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass:
+                  "text-white text-xs bg-purple-900 rounded-md py-3 px-8"
+              },
+              [_vm._v("Add gig")]
+            )
+          ]
+        )
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigTable.vue?vue&type=template&id=e2239018&":
 /*!***********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigTable.vue?vue&type=template&id=e2239018& ***!
@@ -37687,6 +38054,21 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("td", { staticClass: "py-2 text-right pr-2" }, [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "bg-green-200 text-green-600 text-xs px-8 py-1 rounded-lg",
+                  attrs: { type: "submit" },
+                  on: {
+                    click: function($event) {
+                      return _vm.updateGig(gig.id)
+                    }
+                  }
+                },
+                [_vm._v("Update")]
+              ),
+              _vm._v(" "),
               _c(
                 "button",
                 {
@@ -50099,17 +50481,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
+/* harmony import */ var _GigDetails_vue_vue_type_template_id_4258a8e8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GigDetails.vue?vue&type=template&id=4258a8e8& */ "./resources/js/components/GigDetails.vue?vue&type=template&id=4258a8e8&");
+/* harmony import */ var _GigDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GigDetails.vue?vue&type=script&lang=js& */ "./resources/js/components/GigDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
-  script,
-  render,
-  staticRenderFns,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _GigDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _GigDetails_vue_vue_type_template_id_4258a8e8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GigDetails_vue_vue_type_template_id_4258a8e8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -50117,8 +50502,42 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   
 )
 
+/* hot reload */
+if (false) { var api; }
 component.options.__file = "resources/js/components/GigDetails.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/GigDetails.vue?vue&type=script&lang=js&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/components/GigDetails.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GigDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./GigDetails.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GigDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/GigDetails.vue?vue&type=template&id=4258a8e8&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/GigDetails.vue?vue&type=template&id=4258a8e8& ***!
+  \*******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigDetails_vue_vue_type_template_id_4258a8e8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./GigDetails.vue?vue&type=template&id=4258a8e8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigDetails.vue?vue&type=template&id=4258a8e8&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigDetails_vue_vue_type_template_id_4258a8e8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigDetails_vue_vue_type_template_id_4258a8e8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -50131,17 +50550,20 @@ component.options.__file = "resources/js/components/GigDetails.vue"
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
+/* harmony import */ var _GigSalary_vue_vue_type_template_id_3da5b894___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GigSalary.vue?vue&type=template&id=3da5b894& */ "./resources/js/components/GigSalary.vue?vue&type=template&id=3da5b894&");
+/* harmony import */ var _GigSalary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GigSalary.vue?vue&type=script&lang=js& */ "./resources/js/components/GigSalary.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
-  script,
-  render,
-  staticRenderFns,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _GigSalary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _GigSalary_vue_vue_type_template_id_3da5b894___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GigSalary_vue_vue_type_template_id_3da5b894___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -50149,8 +50571,42 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   
 )
 
+/* hot reload */
+if (false) { var api; }
 component.options.__file = "resources/js/components/GigSalary.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/GigSalary.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/GigSalary.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GigSalary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./GigSalary.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigSalary.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GigSalary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/GigSalary.vue?vue&type=template&id=3da5b894&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/GigSalary.vue?vue&type=template&id=3da5b894& ***!
+  \******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigSalary_vue_vue_type_template_id_3da5b894___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./GigSalary.vue?vue&type=template&id=3da5b894& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigSalary.vue?vue&type=template&id=3da5b894&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigSalary_vue_vue_type_template_id_3da5b894___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigSalary_vue_vue_type_template_id_3da5b894___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
