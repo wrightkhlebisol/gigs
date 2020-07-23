@@ -19,7 +19,7 @@
 
     <tbody class="font-medium">
       <tr
-        class="items-start rounded-full bg-white text-gray-800"
+        class="items-start rounded-full bg-white text-gray-700"
         v-for="gig in allGigs"
         :key="gig.id"
       >

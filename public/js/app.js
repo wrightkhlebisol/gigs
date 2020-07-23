@@ -1952,16 +1952,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1971,15 +1961,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      //   id: 0,
-      //   min_salary: 0,
-      //   max_salary: 0,
-      //   role: "",
-      //   company: "",
-      //   country: "",
-      //   state: "",
-      //   tags: "",
-      //   address: "",
       gigShowState: true
     };
   },
@@ -2169,10 +2150,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  //   props: {
-  //     min_salary: 0,
-  //     max_salary: 0
-  //   },
   data: function data() {
     return {
       min_salary: 0,
@@ -2195,11 +2172,7 @@ __webpack_require__.r(__webpack_exports__);
         max_salary: this.max_salary
       }).then(function (res) {
         _this.createStatus = "Gig Created !!!";
-
-        _this.$emit("userCreatedEvent");
-
-        res.data;
-        console.log(res);
+        location.href = "/";
       })["catch"](function (err) {
         _this.createStatus = "Gig Creation Failed, Check the form !!!";
       });
@@ -38357,7 +38330,7 @@ var render = function() {
           "tr",
           {
             key: gig.id,
-            staticClass: "items-start rounded-full bg-white text-gray-800"
+            staticClass: "items-start rounded-full bg-white text-gray-700"
           },
           [
             _c("td", { staticClass: "py-2 pl-5" }, [

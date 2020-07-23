@@ -36,10 +36,6 @@
 
 <script>
 export default {
-  //   props: {
-  //     min_salary: 0,
-  //     max_salary: 0
-  //   },
   data() {
     return {
       min_salary: 0,
@@ -62,9 +58,7 @@ export default {
         })
         .then(res => {
           this.createStatus = "Gig Created !!!";
-          this.$emit("userCreatedEvent");
-          res.data;
-          console.log(res);
+          location.href = "/";
         })
         .catch(err => {
           this.createStatus = "Gig Creation Failed, Check the form !!!";

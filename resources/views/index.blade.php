@@ -7,7 +7,7 @@
     </div>
 
     <div>
-        <a href="/gig/create" class="text-white text-xs bg-purple-900 rounded-md p-2 px">New Gig +</a>
+        <a href="/gig/create" class="text-white text-xs bg-purple-900 rounded-md p-2 px-8">New Gig +</a>
     </div>
 </div>
 <div class="px-16 mb-2 font-bold text-gray-600 text-sm flex justify-between border-b-2 border-gray-300">

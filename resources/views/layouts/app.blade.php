@@ -34,15 +34,17 @@
 	<div id="app" class="bg-gray-300 font-sans flex h-screen">
 		<div class="w-1/6 pl-6 bg-gray-100" style="border: 2px solid #ECECEC; opacity: 0.5; font-family: Nunito">
 			<div>
-				<img src="{{asset('img/Group493.svg')}}" class="h-20 w-20 items-center justify-center inline">
+				<a href="/">
+					<img src="{{asset('img/Group493.svg')}}" class="h-20 w-20 items-center justify-center inline">
+				</a>
 			</div>
 
 			<div class="py-5">
-				<img src="{{asset('img/Icon-home-fill.svg')}}" class="h-6 w-6 items-center justify-center inline"> Dashboard
+				<img src="{{asset('img/Icon-home-fill.svg')}}" class="h-6 w-6 items-center justify-center inline"><a href="/">Dashboard</a>
 			</div>
 
 			<div class="py-5">
-				<img src="{{asset('img/Icon-briefcase-fill.svg')}}" style="color: #eecd7d;" class="h-6 w-6 items-center justify-center inline"> Gigs
+				<img src="{{asset('img/Icon-briefcase-fill.svg')}}" style="color: #eecd7d;" class="h-6 w-6 items-center justify-center inline"> <a href="/">Gigs</a>
 			</div>
 
 			<div class="py-5">
