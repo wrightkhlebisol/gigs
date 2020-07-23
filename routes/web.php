@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', 'GigsController');
+Route::get('/', 'GigsController@index');
+
+Route::resource('/gig', 'GigsController');
+
+Route::get('/gigs', 'GigsController@allGigs');

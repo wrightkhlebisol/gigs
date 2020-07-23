@@ -15,8 +15,12 @@ class GigsController extends Controller
     public function index(Gigs $gigs)
     {
         //
-        $allGigs = $gigs->orderByDesc('created_at')->get();
-        return view('index', compact('allGigs'));
+        return view('index');
+    }
+
+    public function allGigs(Gigs $gigs)
+    {
+        return $gigs->orderByDesc('created_at')->get();
     }
 
     /**
@@ -93,13 +97,15 @@ class GigsController extends Controller
      * @param  \App\Gigs  $gigs
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Gigs $gigs)
+    public function destroy($id)
     {
         //
-        if ($gigs->delete()) {
-            return $gigs;
+        $gig = Gigs::findOrFail($id);
+
+        if ($gig->delete()) {
+            return $gig;
         } else {
-            return response()->json("Gigs $gigs->id not found", 404);
+            return response()->json("Gig $id not found", 404);
         }
     }
 }

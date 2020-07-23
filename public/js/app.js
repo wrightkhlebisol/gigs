@@ -1932,6 +1932,90 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigTable.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigTable.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      allGigs: []
+    };
+  },
+  methods: {
+    getAllGigs: function getAllGigs() {
+      var _this = this;
+
+      axios.get("/gigs").then(function (data) {
+        _this.allGigs = data.data;
+      })["catch"]();
+    },
+    deleteGig: function deleteGig(gigId) {
+      var _this2 = this;
+
+      if (confirm("Are you sure you want to delete gig ".concat(gigId))) {
+        axios["delete"]("/gig/".concat(gigId)).then(function (data) {
+          _this2.getAllGigs();
+        })["catch"]();
+      }
+    }
+  },
+  mounted: function mounted() {
+    this.getAllGigs();
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
@@ -37556,6 +37640,115 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigTable.vue?vue&type=template&id=e2239018&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigTable.vue?vue&type=template&id=e2239018& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("table", { staticClass: "w-full text-gray-600" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "tbody",
+      { staticClass: "font-medium" },
+      _vm._l(_vm.allGigs, function(gig) {
+        return _c(
+          "tr",
+          {
+            key: gig.id,
+            staticClass: "items-start rounded-full bg-white text-gray-800"
+          },
+          [
+            _c("td", { staticClass: "py-2 pl-5" }, [
+              _c("input", {
+                attrs: { type: "checkbox", name: "", id: "gig_" + gig.id },
+                domProps: { value: gig.id }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(gig.role))]),
+            _vm._v(" "),
+            _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(gig.company))]),
+            _vm._v(" "),
+            _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(gig.created_at))]),
+            _vm._v(" "),
+            _c("td", { staticClass: "py-2" }, [
+              _vm._v(_vm._s(gig.min_salary) + " - " + _vm._s(gig.max_salary))
+            ]),
+            _vm._v(" "),
+            _c("td", { staticClass: "py-2 text-right pr-2" }, [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg",
+                  attrs: { type: "submit" },
+                  on: {
+                    click: function($event) {
+                      return _vm.deleteGig(gig.id)
+                    }
+                  }
+                },
+                [_vm._v("Delete")]
+              )
+            ])
+          ]
+        )
+      }),
+      0
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "py-2 text-xs font-light" }, [
+      _c("tr", { staticClass: "items-start" }, [
+        _c("th", { staticClass: "text-left py-5" }),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-left py-5" }, [_vm._v("Role")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-left py-5" }, [_vm._v("Company")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-left py-5" }, [
+          _vm._v("\n        Date\n        "),
+          _c("img", {
+            staticClass: "h-4 w-4 inline",
+            attrs: { src: "img/Group288.svg" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-left py-5" }, [
+          _vm._v("\n        Salary ($)\n        "),
+          _c("img", {
+            staticClass: "h-4 w-4 inline",
+            attrs: { src: "img/Group288.svg" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-left py-5" })
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -49755,6 +49948,9 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+Vue.component('gig-table', __webpack_require__(/*! ./components/GigTable.vue */ "./resources/js/components/GigTable.vue")["default"]);
+Vue.component('gig-salary', __webpack_require__(/*! ./components/GigSalary.vue */ "./resources/js/components/GigSalary.vue")["default"]);
+Vue.component('gig-details', __webpack_require__(/*! ./components/GigDetails.vue */ "./resources/js/components/GigDetails.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -49889,6 +50085,139 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/GigDetails.vue":
+/*!************************************************!*\
+  !*** ./resources/js/components/GigDetails.vue ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/components/GigDetails.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/GigSalary.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/GigSalary.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__["default"])(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/components/GigSalary.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/GigTable.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/components/GigTable.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _GigTable_vue_vue_type_template_id_e2239018___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GigTable.vue?vue&type=template&id=e2239018& */ "./resources/js/components/GigTable.vue?vue&type=template&id=e2239018&");
+/* harmony import */ var _GigTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GigTable.vue?vue&type=script&lang=js& */ "./resources/js/components/GigTable.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _GigTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _GigTable_vue_vue_type_template_id_e2239018___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GigTable_vue_vue_type_template_id_e2239018___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/GigTable.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/GigTable.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/GigTable.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GigTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./GigTable.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigTable.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GigTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/GigTable.vue?vue&type=template&id=e2239018&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/GigTable.vue?vue&type=template&id=e2239018& ***!
+  \*****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigTable_vue_vue_type_template_id_e2239018___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./GigTable.vue?vue&type=template&id=e2239018& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigTable.vue?vue&type=template&id=e2239018&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigTable_vue_vue_type_template_id_e2239018___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigTable_vue_vue_type_template_id_e2239018___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
