@@ -23,14 +23,19 @@
     </div>
 
     <div class="my-20 mb-10" style="text-align: right;">
-      <a href="/" class="mr-5">Back</a>
+      <a href="#" @click.prevent="$emit('salaryEvent')" class="mr-5">Back</a>
       <button class="text-white text-xs bg-purple-900 rounded-md py-3 px-8">Add gig</button>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    min_salary: 0,
+    max_salary: 0
+  }
+};
 </script>
 
 <style>

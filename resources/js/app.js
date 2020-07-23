@@ -23,6 +23,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('gig-table', require('./components/GigTable.vue').default);
 Vue.component('gig-salary', require('./components/GigSalary.vue').default);
 Vue.component('gig-details', require('./components/GigDetails.vue').default);
+Vue.component('gig-create', require('./components/GigCreate.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

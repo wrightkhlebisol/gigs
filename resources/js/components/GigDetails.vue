@@ -71,13 +71,26 @@
 
     <div class="my-20 mb-10" style="text-align: right;">
       <a href="/" class="mr-5">Cancel</a>
-      <button class="text-white text-xs bg-purple-900 rounded-md py-3 px-8">Continue</button>
+      <button
+        class="text-white text-xs bg-purple-900 rounded-md py-3 px-8"
+        @click="$emit('detailsEvent')"
+      >Continue</button>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    id: 0,
+    role: "",
+    company: "",
+    country: "",
+    state: "",
+    tags: "",
+    address: ""
+  }
+};
 </script>
 
 <style>

@@ -1932,6 +1932,71 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigCreate.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigCreate.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _GigDetails_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GigDetails.vue */ "./resources/js/components/GigDetails.vue");
+/* harmony import */ var _GigSalary_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GigSalary.vue */ "./resources/js/components/GigSalary.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    GigDetails: _GigDetails_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    GigSalary: _GigSalary_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      id: 0,
+      min_salary: 0,
+      max_salary: 0,
+      role: "",
+      company: "",
+      country: "",
+      state: "",
+      tags: "",
+      address: "",
+      gigShowState: true
+    };
+  },
+  methods: {
+    toggleGigShowState: function toggleGigShowState() {
+      this.gigShowState = !this.gigShowState;
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigDetails.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigDetails.vue?vue&type=script&lang=js& ***!
@@ -2019,7 +2084,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    id: 0,
+    role: "",
+    company: "",
+    country: "",
+    state: "",
+    tags: "",
+    address: ""
+  }
+});
 
 /***/ }),
 
@@ -2063,7 +2141,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    min_salary: 0,
+    max_salary: 0
+  }
+});
 
 /***/ }),
 
@@ -37784,6 +37867,68 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigCreate.vue?vue&type=template&id=067cb274&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigCreate.vue?vue&type=template&id=067cb274& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("GigDetails", {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.gigShowState,
+            expression: "gigShowState"
+          }
+        ],
+        attrs: {
+          id: _vm.id,
+          role: _vm.role,
+          company: _vm.company,
+          country: _vm.country,
+          state: _vm.state,
+          tags: _vm.tags,
+          address: _vm.address
+        },
+        on: { detailsEvent: _vm.toggleGigShowState }
+      }),
+      _vm._v(" "),
+      _c("GigSalary", {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: !_vm.gigShowState,
+            expression: "!gigShowState"
+          }
+        ],
+        attrs: { min_salary: _vm.min_salary, max_salary: _vm.max_salary },
+        on: { salaryEvent: _vm.toggleGigShowState }
+      })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigDetails.vue?vue&type=template&id=4258a8e8&":
 /*!*************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/GigDetails.vue?vue&type=template&id=4258a8e8& ***!
@@ -37799,125 +37944,128 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "rounded-lg shadow-lg bg-white p-12 mb-4" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1),
+    _vm._v(" "),
+    _vm._m(2),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "my-20 mb-10", staticStyle: { "text-align": "right" } },
+      [
+        _c("a", { staticClass: "mr-5", attrs: { href: "/" } }, [
+          _vm._v("Cancel")
+        ]),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass:
+              "text-white text-xs bg-purple-900 rounded-md py-3 px-8",
+            on: {
+              click: function($event) {
+                return _vm.$emit("detailsEvent")
+              }
+            }
+          },
+          [_vm._v("Continue")]
+        )
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "rounded-lg shadow-lg bg-white p-12 mb-4" },
-      [
-        _c("div", { staticClass: "mb-4" }, [
-          _c("div", { staticClass: "flex justify-between" }, [
-            _c("div", { staticClass: "w-1/2 mr-2" }, [
-              _c("label", { attrs: { for: "role" } }, [_vm._v("Role")]),
-              _vm._v(" "),
-              _c("input", {
-                staticClass:
-                  "border-2 border-gray-200 rounded-lg p-2 w-full block mt-3",
-                attrs: {
-                  type: "text",
-                  name: "role",
-                  id: "role",
-                  placeholder: "e.g Product Designer"
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "w-1/2" }, [
-              _c("label", { attrs: { for: "company" } }, [_vm._v("Company")]),
-              _vm._v(" "),
-              _c("input", {
-                staticClass:
-                  "border-2 border-gray-200 rounded-lg p-2 w-full block mt-3",
-                attrs: {
-                  id: "company",
-                  name: "company",
-                  type: "text",
-                  placeholder: "e.g Krystal Digital"
-                }
-              })
-            ])
-          ])
+    return _c("div", { staticClass: "mb-4" }, [
+      _c("div", { staticClass: "flex justify-between" }, [
+        _c("div", { staticClass: "w-1/2 mr-2" }, [
+          _c("label", { attrs: { for: "role" } }, [_vm._v("Role")]),
+          _vm._v(" "),
+          _c("input", {
+            staticClass:
+              "border-2 border-gray-200 rounded-lg p-2 w-full block mt-3",
+            attrs: {
+              type: "text",
+              name: "role",
+              id: "role",
+              placeholder: "e.g Product Designer"
+            }
+          })
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "mb-4" }, [
-          _c("p", [_vm._v("Location")]),
+        _c("div", { staticClass: "w-1/2" }, [
+          _c("label", { attrs: { for: "company" } }, [_vm._v("Company")]),
           _vm._v(" "),
-          _c("div", { staticClass: "flex justify-between" }, [
-            _c("input", {
-              staticClass:
-                "border-2 border-gray-200 rounded-lg p-2 w-full mr-2 mt-3",
-              attrs: { type: "text", name: "country", placeholder: "Country" }
-            }),
-            _vm._v(" "),
-            _c("input", {
-              staticClass:
-                "border-2 border-gray-200 rounded-lg p-2 w-full mt-3",
-              attrs: {
-                type: "text",
-                name: "state",
-                placeholder: "State/Region"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", [
-            _c("input", {
-              staticClass:
-                "border-2 border-gray-200 rounded-lg p-2 w-full mt-3",
-              attrs: { type: "text", name: "address", placeholder: "Address" }
-            })
-          ])
-        ]),
+          _c("input", {
+            staticClass:
+              "border-2 border-gray-200 rounded-lg p-2 w-full block mt-3",
+            attrs: {
+              id: "company",
+              name: "company",
+              type: "text",
+              placeholder: "e.g Krystal Digital"
+            }
+          })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-4" }, [
+      _c("p", [_vm._v("Location")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex justify-between" }, [
+        _c("input", {
+          staticClass:
+            "border-2 border-gray-200 rounded-lg p-2 w-full mr-2 mt-3",
+          attrs: { type: "text", name: "country", placeholder: "Country" }
+        }),
         _vm._v(" "),
-        _c("div", { staticClass: "mb-4" }, [
-          _c("p", [_vm._v("Add Tags")]),
-          _vm._v(" "),
-          _c("div", [
-            _c("input", {
-              staticClass:
-                "border-2 border-gray-200 rounded-lg p-2 w-full my-3",
-              attrs: { type: "text", name: "tags", placeholder: "Tags" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("span", [
-            _vm._v("\n      Suggested tags:\n      "),
-            _c("span", { staticClass: "underline" }, [_vm._v("full time")]),
-            _vm._v(" "),
-            _c("span", { staticClass: "underline" }, [_vm._v("Contract")]),
-            _vm._v(" "),
-            _c("span", { staticClass: "underline" }, [_vm._v("freelance")])
-          ])
-        ]),
+        _c("input", {
+          staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full mt-3",
+          attrs: { type: "text", name: "state", placeholder: "State/Region" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("input", {
+          staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full mt-3",
+          attrs: { type: "text", name: "address", placeholder: "Address" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-4" }, [
+      _c("p", [_vm._v("Add Tags")]),
+      _vm._v(" "),
+      _c("div", [
+        _c("input", {
+          staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full my-3",
+          attrs: { type: "text", name: "tags", placeholder: "Tags" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("span", [
+        _vm._v("\n      Suggested tags:\n      "),
+        _c("span", { staticClass: "underline" }, [_vm._v("full time")]),
         _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "my-20 mb-10",
-            staticStyle: { "text-align": "right" }
-          },
-          [
-            _c("a", { staticClass: "mr-5", attrs: { href: "/" } }, [
-              _vm._v("Cancel")
-            ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass:
-                  "text-white text-xs bg-purple-900 rounded-md py-3 px-8"
-              },
-              [_vm._v("Continue")]
-            )
-          ]
-        )
-      ]
-    )
+        _c("span", { staticClass: "underline" }, [_vm._v("Contract")]),
+        _vm._v(" "),
+        _c("span", { staticClass: "underline" }, [_vm._v("freelance")])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -37941,70 +38089,71 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "rounded-lg shadow-lg bg-white p-12 mb-4" }, [
+    _c("h1", { staticClass: "text-md mb-3 text-gray-700" }, [_vm._v("Salary")]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "my-20 mb-10", staticStyle: { "text-align": "right" } },
+      [
+        _c(
+          "a",
+          {
+            staticClass: "mr-5",
+            attrs: { href: "#" },
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                return _vm.$emit("salaryEvent")
+              }
+            }
+          },
+          [_vm._v("Back")]
+        ),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "text-white text-xs bg-purple-900 rounded-md py-3 px-8"
+          },
+          [_vm._v("Add gig")]
+        )
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "rounded-lg shadow-lg bg-white p-12 mb-4" },
-      [
-        _c("h1", { staticClass: "text-md mb-3 text-gray-700" }, [
-          _vm._v("Salary")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex justify-between mb-16" }, [
-          _c("div", { staticClass: "w-1/2 mr-2" }, [
-            _c("input", {
-              staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full",
-              attrs: {
-                type: "number",
-                min: "0",
-                name: "min_salary",
-                placeholder: "Minimum"
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "w-1/2" }, [
-            _c("input", {
-              staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full",
-              attrs: {
-                type: "number",
-                min: "0",
-                name: "max_salary",
-                placeholder: "Maximum"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "my-20 mb-10",
-            staticStyle: { "text-align": "right" }
-          },
-          [
-            _c("a", { staticClass: "mr-5", attrs: { href: "/" } }, [
-              _vm._v("Back")
-            ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass:
-                  "text-white text-xs bg-purple-900 rounded-md py-3 px-8"
-              },
-              [_vm._v("Add gig")]
-            )
-          ]
-        )
-      ]
-    )
+    return _c("div", { staticClass: "flex justify-between mb-16" }, [
+      _c("div", { staticClass: "w-1/2 mr-2" }, [
+        _c("input", {
+          staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full",
+          attrs: {
+            type: "number",
+            min: "0",
+            name: "min_salary",
+            placeholder: "Minimum"
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "w-1/2" }, [
+        _c("input", {
+          staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full",
+          attrs: {
+            type: "number",
+            min: "0",
+            name: "max_salary",
+            placeholder: "Maximum"
+          }
+        })
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -50339,6 +50488,7 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 Vue.component('gig-table', __webpack_require__(/*! ./components/GigTable.vue */ "./resources/js/components/GigTable.vue")["default"]);
 Vue.component('gig-salary', __webpack_require__(/*! ./components/GigSalary.vue */ "./resources/js/components/GigSalary.vue")["default"]);
 Vue.component('gig-details', __webpack_require__(/*! ./components/GigDetails.vue */ "./resources/js/components/GigDetails.vue")["default"]);
+Vue.component('gig-create', __webpack_require__(/*! ./components/GigCreate.vue */ "./resources/js/components/GigCreate.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -50473,6 +50623,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/GigCreate.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/GigCreate.vue ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _GigCreate_vue_vue_type_template_id_067cb274___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GigCreate.vue?vue&type=template&id=067cb274& */ "./resources/js/components/GigCreate.vue?vue&type=template&id=067cb274&");
+/* harmony import */ var _GigCreate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GigCreate.vue?vue&type=script&lang=js& */ "./resources/js/components/GigCreate.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _GigCreate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _GigCreate_vue_vue_type_template_id_067cb274___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _GigCreate_vue_vue_type_template_id_067cb274___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/GigCreate.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/GigCreate.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/GigCreate.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GigCreate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./GigCreate.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigCreate.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_GigCreate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/GigCreate.vue?vue&type=template&id=067cb274&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/GigCreate.vue?vue&type=template&id=067cb274& ***!
+  \******************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigCreate_vue_vue_type_template_id_067cb274___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./GigCreate.vue?vue&type=template&id=067cb274& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/GigCreate.vue?vue&type=template&id=067cb274&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigCreate_vue_vue_type_template_id_067cb274___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_GigCreate_vue_vue_type_template_id_067cb274___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

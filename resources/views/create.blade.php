@@ -19,7 +19,8 @@
 		</div>
 
 		<div class="w-3/5">
-			<gig-details></gig-details>
+			<gig-create>
+			</gig-create>
 		</div>
 	</div>
 
