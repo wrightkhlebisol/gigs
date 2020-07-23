@@ -25,14 +25,17 @@
 		/* body {
 			font: Regular 45px/63px "Circular Std Bold";
 		} */
+		#app {
+			zoom: 60%;
+		}
 	</style>
 
 </head>
 
 <body>
 
-	<div id="app" class="bg-gray-100 font-sans flex h-screen">
-		<div class="w-1/6 px-6 bg-gray-100 text-sm" style="border: 2px solid #ECECEC; opacity: 0.5; font-family: Nunito">
+	<div id="app" class="font-sans flex h-full">
+		<div class="w-1/6 px-6 bg-gray-100 text-sm" style="border: 2px solid #ECECEC; opacity: 0.5; font-family: Nunito; background-color: #FEFEFF;">
 			<div>
 				<a href="/">
 					<img src="{{asset('img/Group493.svg')}}" class="h-20 w-20 items-center justify-center inline">
@@ -66,10 +69,10 @@
 			</div>
 		</div>
 
-		<div class="w-5/6 bg-gray-200">
+		<div class="w-5/6" style="background-color: #FBFBFF;">
 			<header class="justify-between py-6 px-16 flex" style="border: 1px solid #ECECEC; opacity: 1;">
 				<div class="w-2/3">
-					<input type="search" name="" id="" class="p-2 w-3/4 bg-gray-100 border-2 border-gray-200 rounded-lg" placeholder="Search">
+					<input type="search" name="" id="" class="p-2 w-3/4 border-2 border-gray-300 rounded-lg" style="background-color: #FBFBFF;" placeholder=" Search">
 				</div>
 				<div>
 					<img src="{{asset('img/Group140.svg')}}" class="h-4 w-4 mr-12 items-center justify-center inline">
