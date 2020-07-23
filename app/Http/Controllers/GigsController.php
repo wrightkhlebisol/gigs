@@ -43,9 +43,10 @@ class GigsController extends Controller
     public function store(Request $request, Gigs $gigs)
     {
         //
+        // return $request->all();
         $gigs->create($request->all());
 
-        return response()->json(['success' => 'User Created', 'user_details' => $request->all()], 200);
+        return response()->json(['success' => 'Gig Created', 'gig_details' => $request->all()], 200);
     }
 
     /**
