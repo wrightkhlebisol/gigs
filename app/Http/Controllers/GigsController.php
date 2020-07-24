@@ -12,7 +12,7 @@ class GigsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Gigs $gigs)
+    public function index()
     {
         //
         return view('index');
@@ -55,13 +55,16 @@ class GigsController extends Controller
      * @param  \App\Gigs  $gigs
      * @return \Illuminate\Http\Response
      */
-    public function show(Gigs $gigs)
+    public function show($id)
     {
         //
-        if (!empty($gigs)) {
-            return $gigs;
+
+        $gig = Gigs::findOrFail($id);
+
+        if (!empty($gig)) {
+            return $gig;
         } else {
-            return response()->json("Gigs $gigs->id not found", 404);
+            return response()->json("Gig $gig->id not found", 404);
         }
     }
 

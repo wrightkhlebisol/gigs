@@ -34,7 +34,7 @@
 
 <body>
 
-	<div id="app" class="font-sans flex h-full">
+	<div id="app" class="font-sans flex h-full" style=" background-color: #FEFEFF;">
 		<div class="w-1/6 px-6 bg-gray-100 text-sm" style="border: 2px solid #ECECEC; opacity: 0.5; font-family: Nunito; background-color: #FEFEFF;">
 			<div>
 				<a href="/">

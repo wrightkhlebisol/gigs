@@ -2330,10 +2330,54 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      allGigs: []
+      allGigs: [],
+      updateModalState: false,
+      role: "",
+      company: "",
+      state: "",
+      country: "",
+      created_at: "",
+      address: "",
+      tags: "",
+      min_salary: 0,
+      max_salary: 0,
+      id: 0
     };
   },
   methods: {
@@ -2344,15 +2388,35 @@ __webpack_require__.r(__webpack_exports__);
         _this.allGigs = data.data;
       })["catch"]();
     },
-    updateGig: function updateGig(gigId) {
-      alert("TODO: Update modal for ".concat(gigId));
+    getOneGig: function getOneGig(gigId) {
+      var _this2 = this;
+
+      if (gigId) {
+        axios.get("/gig/".concat(gigId)).then(function (data) {
+          _this2.role = data.data.role;
+          _this2.company = data.data.company;
+          _this2.state = data.data.state;
+          _this2.country = data.data.country;
+          _this2.created_at = data.data.created_at;
+          _this2.address = data.data.address;
+          _this2.tags = data.data.tags;
+          _this2.min_salary = data.data.min_salary;
+          _this2.max_salary = data.data.max_salary;
+        })["catch"]();
+      }
+    },
+    toggleModalState: function toggleModalState(gigId) {
+      this.updateModalState = !this.updateModalState;
+      this.getOneGig(gigId);
+    },
+    updateGig: function updateGig(gigId) {// alert(`TODO: Update modal for ${gigId}`);
     },
     deleteGig: function deleteGig(gigId) {
-      var _this2 = this;
+      var _this3 = this;
 
       if (confirm("Are you sure you want to delete gig ".concat(gigId))) {
         axios["delete"]("/gig/".concat(gigId)).then(function (data) {
-          _this2.getAllGigs();
+          _this3.getAllGigs();
         })["catch"]();
       }
     }
@@ -39070,12 +39134,41 @@ var render = function() {
   return _c("div", { staticClass: "w-full relative" }, [
     _c(
       "div",
-      { staticClass: "w-full h-full bg-gray-600 top-0 left-0 absolute" },
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.updateModalState,
+            expression: "updateModalState"
+          }
+        ],
+        staticClass: "w-2/3 h-full bg-gray-600 top-0 left-0 absolute",
+        staticStyle: { margin: "auto" }
+      },
       [
         _c(
           "div",
-          { staticClass: "opacity-100 bg-white rounded-md shadow-sm" },
+          {
+            staticClass: "opacity-100 m-20 p-20 bg-white rounded-md shadow-sm"
+          },
           [
+            _c("div", { staticClass: "mb-4" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "mr-5",
+                  attrs: { href: "#" },
+                  on: {
+                    click: function($event) {
+                      return _vm.toggleModalState()
+                    }
+                  }
+                },
+                [_vm._v("Cancel")]
+              )
+            ]),
+            _vm._v(" "),
             _c("div", { staticClass: "mb-4" }, [
               _c("div", { staticClass: "flex justify-between" }, [
                 _c("div", { staticClass: "w-1/2 mr-2" }, [
@@ -39235,6 +39328,70 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
+            _c("h1", { staticClass: "text-md mb-3 text-gray-700" }, [
+              _vm._v("Salary")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "flex justify-between mb-4" }, [
+              _c("div", { staticClass: "w-1/2 mr-2" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.min_salary,
+                      expression: "min_salary"
+                    }
+                  ],
+                  staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full",
+                  attrs: {
+                    type: "number",
+                    min: "0",
+                    name: "min_salary",
+                    placeholder: "Minimum"
+                  },
+                  domProps: { value: _vm.min_salary },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.min_salary = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "w-1/2" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.max_salary,
+                      expression: "max_salary"
+                    }
+                  ],
+                  staticClass: "border-2 border-gray-200 rounded-lg p-2 w-full",
+                  attrs: {
+                    type: "number",
+                    min: "0",
+                    name: "max_salary",
+                    placeholder: "Maximum"
+                  },
+                  domProps: { value: _vm.max_salary },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.max_salary = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
             _c("div", { staticClass: "mb-4" }, [
               _c("p", [_vm._v("Add Tags")]),
               _vm._v(" "),
@@ -39266,14 +39423,44 @@ var render = function() {
               _vm._m(0)
             ]),
             _vm._v(" "),
-            _vm._m(1)
+            _c(
+              "div",
+              {
+                staticClass: "my-20 mb-10",
+                staticStyle: { "text-align": "right" }
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    staticClass: "mr-5",
+                    attrs: { href: "#" },
+                    on: {
+                      click: function($event) {
+                        return _vm.toggleModalState()
+                      }
+                    }
+                  },
+                  [_vm._v("Cancel")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "text-white text-xs bg-purple-900 rounded-md py-3 px-8"
+                  },
+                  [_vm._v("Continue")]
+                )
+              ]
+            )
           ]
         )
       ]
     ),
     _vm._v(" "),
     _c("table", { staticClass: "w-full text-gray-600" }, [
-      _vm._m(2),
+      _vm._m(1),
       _vm._v(" "),
       _c(
         "tbody",
@@ -39314,7 +39501,7 @@ var render = function() {
                     attrs: { type: "submit" },
                     on: {
                       click: function($event) {
-                        return _vm.updateGig(gig.id)
+                        return _vm.toggleModalState(gig.id)
                       }
                     }
                   },
@@ -39357,28 +39544,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("span", { staticClass: "underline" }, [_vm._v("freelance")])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "my-20 mb-10", staticStyle: { "text-align": "right" } },
-      [
-        _c("a", { staticClass: "mr-5", attrs: { href: "/" } }, [
-          _vm._v("Cancel")
-        ]),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "text-white text-xs bg-purple-900 rounded-md py-3 px-8"
-          },
-          [_vm._v("Continue")]
-        )
-      ]
-    )
   },
   function() {
     var _vm = this

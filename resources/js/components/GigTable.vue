@@ -1,7 +1,14 @@
 <template>
   <div class="w-full relative">
-    <div class="w-full h-full bg-gray-600 top-0 left-0 absolute">
-      <div class="opacity-100 bg-white rounded-md shadow-sm">
+    <div
+      class="w-2/3 h-full bg-gray-600 top-0 left-0 absolute"
+      style="margin: auto;"
+      v-show="updateModalState"
+    >
+      <div class="opacity-100 m-20 p-20 bg-white rounded-md shadow-sm">
+        <div class="mb-4">
+          <a href="#" @click="toggleModalState()" class="mr-5">Cancel</a>
+        </div>
         <div class="mb-4">
           <div class="flex justify-between">
             <div class="w-1/2 mr-2">
@@ -58,6 +65,31 @@
           </div>
         </div>
 
+        <h1 class="text-md mb-3 text-gray-700">Salary</h1>
+
+        <div class="flex justify-between mb-4">
+          <div class="w-1/2 mr-2">
+            <input
+              type="number"
+              min="0"
+              class="border-2 border-gray-200 rounded-lg p-2 w-full"
+              name="min_salary"
+              placeholder="Minimum"
+              v-model="min_salary"
+            />
+          </div>
+          <div class="w-1/2">
+            <input
+              type="number"
+              min="0"
+              class="border-2 border-gray-200 rounded-lg p-2 w-full"
+              name="max_salary"
+              placeholder="Maximum"
+              v-model="max_salary"
+            />
+          </div>
+        </div>
+
         <div class="mb-4">
           <p>Add Tags</p>
           <div>
@@ -78,11 +110,12 @@
         </div>
 
         <div class="my-20 mb-10" style="text-align: right;">
-          <a href="/" class="mr-5">Cancel</a>
+          <a href="#" @click="toggleModalState()" class="mr-5">Cancel</a>
           <button class="text-white text-xs bg-purple-900 rounded-md py-3 px-8">Continue</button>
         </div>
       </div>
     </div>
+
     <table class="w-full text-gray-600">
       <thead class="py-2 text-xs font-light">
         <tr class="items-start">
@@ -118,7 +151,7 @@
             <button
               type="submit"
               class="bg-green-200 text-green-600 text-xs px-8 py-1 rounded-lg"
-              @click="updateGig(gig.id)"
+              @click="toggleModalState(gig.id)"
             >Update</button>
 
             <button
@@ -138,6 +171,17 @@ export default {
   data() {
     return {
       allGigs: [],
+      updateModalState: false,
+      role: "",
+      company: "",
+      state: "",
+      country: "",
+      created_at: "",
+      address: "",
+      tags: "",
+      min_salary: 0,
+      max_salary: 0,
+      id: 0,
     };
   },
   methods: {
@@ -149,8 +193,30 @@ export default {
         })
         .catch();
     },
+    getOneGig(gigId) {
+      if (gigId) {
+        axios
+          .get(`/gig/${gigId}`)
+          .then((data) => {
+            this.role = data.data.role;
+            this.company = data.data.company;
+            this.state = data.data.state;
+            this.country = data.data.country;
+            this.created_at = data.data.created_at;
+            this.address = data.data.address;
+            this.tags = data.data.tags;
+            this.min_salary = data.data.min_salary;
+            this.max_salary = data.data.max_salary;
+          })
+          .catch();
+      }
+    },
+    toggleModalState(gigId) {
+      this.updateModalState = !this.updateModalState;
+      this.getOneGig(gigId);
+    },
     updateGig(gigId) {
-      alert(`TODO: Update modal for ${gigId}`);
+      // alert(`TODO: Update modal for ${gigId}`);
     },
     deleteGig(gigId) {
       if (confirm(`Are you sure you want to delete gig ${gigId}`)) {
