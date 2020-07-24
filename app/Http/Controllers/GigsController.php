@@ -87,12 +87,14 @@ class GigsController extends Controller
      * @param  \App\Gigs  $gigs
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Gigs $gigs)
+    public function update(Request $request, $id)
     {
         //
-        $gigs->update($request->all());
+        $gig = Gigs::findOrFail($id);
 
-        return response()->json($gigs, 200);
+        $gig->update($request->all());
+
+        return response()->json($gig, 200);
     }
 
     /**

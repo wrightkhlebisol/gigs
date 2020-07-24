@@ -26,7 +26,7 @@
 			font: Regular 45px/63px "Circular Std Bold";
 		} */
 		#app {
-			zoom: 60%;
+			zoom: 70%;
 		}
 	</style>
 
