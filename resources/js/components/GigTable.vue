@@ -231,6 +231,8 @@ export default {
           max_salary: this.max_salary,
         })
         .then((res) => {
+          this.getAllGigs();
+          this.toggleModalState();
           this.updateStatus = "Employee Updated !!!";
           console.log(this.updateStatus);
           res.data;

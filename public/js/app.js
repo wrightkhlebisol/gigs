@@ -2425,6 +2425,10 @@ __webpack_require__.r(__webpack_exports__);
         min_salary: this.min_salary,
         max_salary: this.max_salary
       }).then(function (res) {
+        _this3.getAllGigs();
+
+        _this3.toggleModalState();
+
         _this3.updateStatus = "Employee Updated !!!";
         console.log(_this3.updateStatus);
         res.data;
