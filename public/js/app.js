@@ -2245,6 +2245,91 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -38982,76 +39067,319 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("table", { staticClass: "w-full text-gray-600" }, [
-    _vm._m(0),
-    _vm._v(" "),
+  return _c("div", { staticClass: "w-full relative" }, [
     _c(
-      "tbody",
-      { staticClass: "font-medium" },
-      _vm._l(_vm.allGigs, function(gig) {
-        return _c(
-          "tr",
-          {
-            key: gig.id,
-            staticClass: "items-start rounded-full bg-white text-gray-700"
-          },
+      "div",
+      { staticClass: "w-full h-full bg-gray-600 top-0 left-0 absolute" },
+      [
+        _c(
+          "div",
+          { staticClass: "opacity-100 bg-white rounded-md shadow-sm" },
           [
-            _c("td", { staticClass: "py-2 pl-5" }, [
-              _c("input", {
-                attrs: { type: "checkbox", name: "", id: "gig_" + gig.id },
-                domProps: { value: gig.id }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(gig.role))]),
-            _vm._v(" "),
-            _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(gig.company))]),
-            _vm._v(" "),
-            _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(gig.created_at))]),
-            _vm._v(" "),
-            _c("td", { staticClass: "py-2" }, [
-              _vm._v(_vm._s(gig.min_salary) + " - " + _vm._s(gig.max_salary))
-            ]),
-            _vm._v(" "),
-            _c("td", { staticClass: "py-2 text-right pr-2" }, [
-              _c(
-                "button",
-                {
-                  staticClass:
-                    "bg-green-200 text-green-600 text-xs px-8 py-1 rounded-lg",
-                  attrs: { type: "submit" },
-                  on: {
-                    click: function($event) {
-                      return _vm.updateGig(gig.id)
+            _c("div", { staticClass: "mb-4" }, [
+              _c("div", { staticClass: "flex justify-between" }, [
+                _c("div", { staticClass: "w-1/2 mr-2" }, [
+                  _c("label", { attrs: { for: "role" } }, [_vm._v("Role")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.role,
+                        expression: "role"
+                      }
+                    ],
+                    staticClass:
+                      "border-2 border-gray-200 rounded-lg p-2 w-full block mt-3",
+                    attrs: {
+                      type: "text",
+                      name: "role",
+                      id: "role",
+                      placeholder: "e.g Product Designer"
+                    },
+                    domProps: { value: _vm.role },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.role = $event.target.value
+                      }
                     }
-                  }
-                },
-                [_vm._v("Update")]
-              ),
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "w-1/2" }, [
+                  _c("label", { attrs: { for: "company" } }, [
+                    _vm._v("Company")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.company,
+                        expression: "company"
+                      }
+                    ],
+                    staticClass:
+                      "border-2 border-gray-200 rounded-lg p-2 w-full block mt-3",
+                    attrs: {
+                      id: "company",
+                      name: "company",
+                      type: "text",
+                      placeholder: "e.g Krystal Digital"
+                    },
+                    domProps: { value: _vm.company },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.company = $event.target.value
+                      }
+                    }
+                  })
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mb-4" }, [
+              _c("p", [_vm._v("Location")]),
               _vm._v(" "),
-              _c(
-                "button",
-                {
+              _c("div", { staticClass: "flex justify-between" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.country,
+                      expression: "country"
+                    }
+                  ],
                   staticClass:
-                    "bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg",
-                  attrs: { type: "submit" },
+                    "border-2 border-gray-200 rounded-lg p-2 w-full mr-2 mt-3",
+                  attrs: {
+                    type: "text",
+                    name: "country",
+                    placeholder: "Country"
+                  },
+                  domProps: { value: _vm.country },
                   on: {
-                    click: function($event) {
-                      return _vm.deleteGig(gig.id)
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.country = $event.target.value
                     }
                   }
-                },
-                [_vm._v("Delete")]
-              )
-            ])
+                }),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.state,
+                      expression: "state"
+                    }
+                  ],
+                  staticClass:
+                    "border-2 border-gray-200 rounded-lg p-2 w-full mt-3",
+                  attrs: {
+                    type: "text",
+                    name: "state",
+                    placeholder: "State/Region"
+                  },
+                  domProps: { value: _vm.state },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.state = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.address,
+                      expression: "address"
+                    }
+                  ],
+                  staticClass:
+                    "border-2 border-gray-200 rounded-lg p-2 w-full mt-3",
+                  attrs: {
+                    type: "text",
+                    name: "address",
+                    placeholder: "Address"
+                  },
+                  domProps: { value: _vm.address },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.address = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "mb-4" }, [
+              _c("p", [_vm._v("Add Tags")]),
+              _vm._v(" "),
+              _c("div", [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.tags,
+                      expression: "tags"
+                    }
+                  ],
+                  staticClass:
+                    "border-2 border-gray-200 rounded-lg p-2 w-full my-3",
+                  attrs: { type: "text", name: "tags", placeholder: "Tags" },
+                  domProps: { value: _vm.tags },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.tags = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(0)
+            ]),
+            _vm._v(" "),
+            _vm._m(1)
           ]
         )
-      }),
-      0
-    )
+      ]
+    ),
+    _vm._v(" "),
+    _c("table", { staticClass: "w-full text-gray-600" }, [
+      _vm._m(2),
+      _vm._v(" "),
+      _c(
+        "tbody",
+        { staticClass: "font-medium" },
+        _vm._l(_vm.allGigs, function(gig) {
+          return _c(
+            "tr",
+            {
+              key: gig.id,
+              staticClass: "items-start rounded-full bg-white text-gray-700"
+            },
+            [
+              _c("td", { staticClass: "py-2 pl-5" }, [
+                _c("input", {
+                  attrs: { type: "checkbox", name: "", id: "gig_" + gig.id },
+                  domProps: { value: gig.id }
+                })
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(gig.role))]),
+              _vm._v(" "),
+              _c("td", { staticClass: "py-2" }, [_vm._v(_vm._s(gig.company))]),
+              _vm._v(" "),
+              _c("td", { staticClass: "py-2" }, [
+                _vm._v(_vm._s(gig.created_at))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "py-2" }, [
+                _vm._v(_vm._s(gig.min_salary) + " - " + _vm._s(gig.max_salary))
+              ]),
+              _vm._v(" "),
+              _c("td", { staticClass: "py-2 text-right pr-2" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "bg-green-200 text-green-600 text-xs px-8 py-1 rounded-lg",
+                    attrs: { type: "submit" },
+                    on: {
+                      click: function($event) {
+                        return _vm.updateGig(gig.id)
+                      }
+                    }
+                  },
+                  [_vm._v("Update")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass:
+                      "bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg",
+                    attrs: { type: "submit" },
+                    on: {
+                      click: function($event) {
+                        return _vm.deleteGig(gig.id)
+                      }
+                    }
+                  },
+                  [_vm._v("Delete")]
+                )
+              ])
+            ]
+          )
+        }),
+        0
+      )
+    ])
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", [
+      _vm._v("\n          Suggested tags:\n          "),
+      _c("span", { staticClass: "underline" }, [_vm._v("full time")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "underline" }, [_vm._v("Contract")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "underline" }, [_vm._v("freelance")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "my-20 mb-10", staticStyle: { "text-align": "right" } },
+      [
+        _c("a", { staticClass: "mr-5", attrs: { href: "/" } }, [
+          _vm._v("Cancel")
+        ]),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "text-white text-xs bg-purple-900 rounded-md py-3 px-8"
+          },
+          [_vm._v("Continue")]
+        )
+      ]
+    )
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -39065,7 +39393,7 @@ var staticRenderFns = [
         _c("th", { staticClass: "text-left py-5" }, [_vm._v("Company")]),
         _vm._v(" "),
         _c("th", { staticClass: "text-left py-5" }, [
-          _vm._v("\n        Date\n        "),
+          _vm._v("\n          Date\n          "),
           _c("img", {
             staticClass: "h-4 w-4 inline",
             attrs: { src: "img/Group288.svg" }
@@ -39073,7 +39401,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("th", { staticClass: "text-left py-5" }, [
-          _vm._v("\n        Salary ($)\n        "),
+          _vm._v("\n          Salary ($)\n          "),
           _c("img", {
             staticClass: "h-4 w-4 inline",
             attrs: { src: "img/Group288.svg" }

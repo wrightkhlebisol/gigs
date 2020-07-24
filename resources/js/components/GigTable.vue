@@ -1,65 +1,150 @@
 <template>
-  <table class="w-full text-gray-600">
-    <thead class="py-2 text-xs font-light">
-      <tr class="items-start">
-        <th class="text-left py-5"></th>
-        <th class="text-left py-5">Role</th>
-        <th class="text-left py-5">Company</th>
-        <th class="text-left py-5">
-          Date
-          <img src="img/Group288.svg" class="h-4 w-4 inline" />
-        </th>
-        <th class="text-left py-5">
-          Salary ($)
-          <img src="img/Group288.svg" class="h-4 w-4 inline" />
-        </th>
-        <th class="text-left py-5"></th>
-      </tr>
-    </thead>
+  <div class="w-full relative">
+    <div class="w-full h-full bg-gray-600 top-0 left-0 absolute">
+      <div class="opacity-100 bg-white rounded-md shadow-sm">
+        <div class="mb-4">
+          <div class="flex justify-between">
+            <div class="w-1/2 mr-2">
+              <label for="role">Role</label>
+              <input
+                type="text"
+                name="role"
+                class="border-2 border-gray-200 rounded-lg p-2 w-full block mt-3"
+                id="role"
+                placeholder="e.g Product Designer"
+                v-model="role"
+              />
+            </div>
+            <div class="w-1/2">
+              <label for="company">Company</label>
+              <input
+                id="company"
+                name="company"
+                class="border-2 border-gray-200 rounded-lg p-2 w-full block mt-3"
+                type="text"
+                placeholder="e.g Krystal Digital"
+                v-model="company"
+              />
+            </div>
+          </div>
+        </div>
 
-    <tbody class="font-medium">
-      <tr
-        class="items-start rounded-full bg-white text-gray-700"
-        v-for="gig in allGigs"
-        :key="gig.id"
-      >
-        <td class="py-2 pl-5">
-          <input type="checkbox" name :value="gig.id" :id="`gig_${gig.id}`" />
-        </td>
-        <td class="py-2">{{gig.role}}</td>
-        <td class="py-2">{{gig.company}}</td>
-        <td class="py-2">{{gig.created_at}}</td>
-        <td class="py-2">{{gig.min_salary}} - {{gig.max_salary}}</td>
-        <td class="py-2 text-right pr-2">
-          <button
-            type="submit"
-            class="bg-green-200 text-green-600 text-xs px-8 py-1 rounded-lg"
-            @click="updateGig(gig.id)"
-          >Update</button>
+        <div class="mb-4">
+          <p>Location</p>
+          <div class="flex justify-between">
+            <input
+              type="text"
+              class="border-2 border-gray-200 rounded-lg p-2 w-full mr-2 mt-3"
+              name="country"
+              placeholder="Country"
+              v-model="country"
+            />
+            <input
+              type="text"
+              class="border-2 border-gray-200 rounded-lg p-2 w-full mt-3"
+              name="state"
+              placeholder="State/Region"
+              v-model="state"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              class="border-2 border-gray-200 rounded-lg p-2 w-full mt-3"
+              name="address"
+              placeholder="Address"
+              v-model="address"
+            />
+          </div>
+        </div>
 
-          <button
-            type="submit"
-            class="bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg"
-            @click="deleteGig(gig.id)"
-          >Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+        <div class="mb-4">
+          <p>Add Tags</p>
+          <div>
+            <input
+              type="text"
+              class="border-2 border-gray-200 rounded-lg p-2 w-full my-3"
+              name="tags"
+              placeholder="Tags"
+              v-model="tags"
+            />
+          </div>
+          <span>
+            Suggested tags:
+            <span class="underline">full time</span>
+            <span class="underline">Contract</span>
+            <span class="underline">freelance</span>
+          </span>
+        </div>
+
+        <div class="my-20 mb-10" style="text-align: right;">
+          <a href="/" class="mr-5">Cancel</a>
+          <button class="text-white text-xs bg-purple-900 rounded-md py-3 px-8">Continue</button>
+        </div>
+      </div>
+    </div>
+    <table class="w-full text-gray-600">
+      <thead class="py-2 text-xs font-light">
+        <tr class="items-start">
+          <th class="text-left py-5"></th>
+          <th class="text-left py-5">Role</th>
+          <th class="text-left py-5">Company</th>
+          <th class="text-left py-5">
+            Date
+            <img src="img/Group288.svg" class="h-4 w-4 inline" />
+          </th>
+          <th class="text-left py-5">
+            Salary ($)
+            <img src="img/Group288.svg" class="h-4 w-4 inline" />
+          </th>
+          <th class="text-left py-5"></th>
+        </tr>
+      </thead>
+
+      <tbody class="font-medium">
+        <tr
+          class="items-start rounded-full bg-white text-gray-700"
+          v-for="gig in allGigs"
+          :key="gig.id"
+        >
+          <td class="py-2 pl-5">
+            <input type="checkbox" name :value="gig.id" :id="`gig_${gig.id}`" />
+          </td>
+          <td class="py-2">{{gig.role}}</td>
+          <td class="py-2">{{gig.company}}</td>
+          <td class="py-2">{{gig.created_at}}</td>
+          <td class="py-2">{{gig.min_salary}} - {{gig.max_salary}}</td>
+          <td class="py-2 text-right pr-2">
+            <button
+              type="submit"
+              class="bg-green-200 text-green-600 text-xs px-8 py-1 rounded-lg"
+              @click="updateGig(gig.id)"
+            >Update</button>
+
+            <button
+              type="submit"
+              class="bg-yellow-200 text-yellow-600 text-xs px-8 py-1 rounded-lg"
+              @click="deleteGig(gig.id)"
+            >Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      allGigs: []
+      allGigs: [],
     };
   },
   methods: {
     getAllGigs() {
       axios
         .get("/gigs")
-        .then(data => {
+        .then((data) => {
           this.allGigs = data.data;
         })
         .catch();
@@ -71,15 +156,15 @@ export default {
       if (confirm(`Are you sure you want to delete gig ${gigId}`)) {
         axios
           .delete(`/gig/${gigId}`)
-          .then(data => {
+          .then((data) => {
             this.getAllGigs();
           })
           .catch();
       }
-    }
+    },
   },
   mounted() {
     this.getAllGigs();
-  }
+  },
 };
 </script>
